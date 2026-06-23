@@ -149,7 +149,7 @@
         .epic-card {
             border: 1px solid var(--border);
             border-radius: 10px; margin-bottom: 0.75rem;
-            overflow: hidden; transition: box-shadow 0.2s;
+            overflow: visible; transition: box-shadow 0.2s;
         }
         .epic-card:hover { box-shadow: 0 2px 10px rgba(0,41,79,0.09); }
 
@@ -317,10 +317,11 @@
         .field-input:focus, .field-select:focus { border-color: var(--lighter2); }
         textarea.field-input { resize: vertical; min-height: 70px; }
 
-        .status-table { border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin-top: 0.5rem; }
+        .status-table { border: 1px solid var(--border); border-radius: 8px; overflow: visible; margin-top: 0.5rem; }
         .status-table-header {
             display: grid; grid-template-columns: 180px 1fr 1fr;
             background: var(--main); padding: 0.5rem 1rem; gap: 1rem;
+            border-radius: 8px 8px 0 0;
         }
         .status-table-header span {
             font-size: 0.68rem; font-weight: 600;
@@ -331,7 +332,7 @@
             padding: 0.6rem 1rem; gap: 1rem; align-items: center;
             border-bottom: 1px solid var(--border); transition: background 0.15s;
         }
-        .status-row:last-child { border-bottom: none; }
+        .status-row:last-child { border-bottom: none; border-radius: 0 0 8px 8px; }
         .status-row:hover { background: var(--subtle); }
         .status-row:nth-child(even) { background: var(--table-content); }
         .status-row:nth-child(even):hover { background: var(--subtle); }
